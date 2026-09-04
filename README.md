@@ -2,40 +2,46 @@
 
 **Social provably-fair meme-coin table on Robinhood Chain.**
 
-Design system locked. Ready for coding agents (Grok Build, Cursor, etc.).
+Design system locked. Tokens first. Ready for coding agents.
 
 ## Repo layout
 
 ```
 ├── README.md
-├── DESIGN.md                 ← tokens, jobs, states, social rules, killed list
-├── GROK-BUILD-PROMPT.md      ← paste this into your coding agent to start
+├── TOKENS.md                 ← START HERE — colors, space, type, CSS, Tailwind, components
+├── DESIGN.md                 ← product jobs, states, screen map, rules
+├── GROK-BUILD-PROMPT.md      ← paste into Grok Build / Cursor
 └── design/
-    ├── bags/                 ← programmatic bag (white circle = logo mask)
-    ├── screens/              ← 11 desktop UI screens (source of truth)
-    └── mobile/               ← key mobile screens
+    ├── bags/                 ← bag base (white circle = logo mask)
+    ├── screens/              ← 11 desktop screens
+    └── mobile/
 ```
 
 ## Quick start for coding agents
 
-1. Read `DESIGN.md`
-2. Paste the full contents of `GROK-BUILD-PROMPT.md` into Grok Build / Cursor
-3. Use `design/screens/` as the visual source of truth
-4. Use `design/bags/bag-base-empty-logo-plate.jpg` for the bag component
+1. Open **`TOKENS.md`** and wire colors/spacing/type (CSS vars or Tailwind/TS)
+2. Paste **`GROK-BUILD-PROMPT.md`** into the agent
+3. Build Button + Bag from tokens
+4. Match **`design/screens/`**
 
-## Visual lock (summary)
+## Token snapshot
 
-- Warm black canvas `#110E08` / `#1C180D`
-- Robin Neon CTA only `#CCFF00`
-- Technical geometric bags + flat white logo plate
-- Sparse PFPs + truncated wallets (`0x7f3a…b2c1`)
-- One screen = one job. State only changes the table + one button.
-- No glass, glow, casino chrome, Dribbble polish
+| Token | Value |
+|-------|--------|
+| bg | `#110E08` |
+| elevated | `#1C180D` |
+| text | `#FFFFFF` |
+| muted | `#8A8783` |
+| **neon (CTA only)** | `#CCFF00` |
+| error | `#FF4D4D` |
+| warning | `#F5A623` |
 
-## Product in one sentence
+Full scale, components, and state→CTA map → **TOKENS.md**
 
-A pawn is a bag. The table is a pile of bags. The winner takes the pile of actual meme-coin bags. Fairness is commit-reveal.
+## Product
+
+A pawn is a bag. The table is a pile of bags. The winner takes the actual meme-coin bags. Fairness is commit-reveal.
 
 ## Status
 
-Design handoff complete. Visual system locked. Ready to build.
+Design + tokens complete. Images on `main`. Ready to build.

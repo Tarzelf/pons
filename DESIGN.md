@@ -6,42 +6,42 @@
 
 ---
 
-## Brand Tokens (do not invent new ones)
+## Start here for coding agents
 
-### Color
-- Canvas / BG: warm black `#110E08` (or `#1C180D`)
-- Text primary: white `#FFFFFF`
-- Text secondary / muted: `#8A8783` / `#B4B1AB`
-- Surface / cards: `#1C180D` or slight lift
-- **Robin Neon (CTA only)**: `#CCFF00`
-- Error / fail: soft red `#FF4D4D` (sparingly)
-- Success: Robin Neon or clean white check
+1. **`TOKENS.md`** ← design tokens (colors, space, type, components, CSS/Tailwind/TS)
+2. **`GROK-BUILD-PROMPT.md`** ← paste into the agent
+3. **`design/screens/`** ← visual source of truth
+4. **`design/bags/bag-base-empty-logo-plate.jpg`** ← bag component base
 
-### Typography
-- Headlines: clean geometric sans (system or RH Phonic equivalent)
-- Body / UI: same family, regular weight
-- Short labels only. No lorem. Real tickers + $ + token amounts.
-- One primary action per state.
-
-### Spacing & Layout
-- Modular 8px grid
-- Generous empty space (less is more)
-- One screen = one job. State only changes the table + the one button.
-
-### Bag System (programmatic)
-- Base asset: `design/design/bags/bag-base-empty-logo-plate.jpg`
-- White circular plate = logo mask
-- Drop any token logo (PNG transparent) into the plate
-- Size / weight of bag = relative % of table
-- Stack for piles when multiple
-
-### Icons / Chrome
-- Minimal. Thin white line icons only.
-- No glass, glow, neon wash, purple, casino chrome, 3D blobs, Dribbble polish.
+**Do not invent tokens.** Everything basic lives in `TOKENS.md`.
 
 ---
 
-## Core Jobs (from MATRIX)
+## Brand summary (see TOKENS.md for full)
+
+| Role | Value |
+|------|--------|
+| Canvas | `#110E08` |
+| Elevated | `#1C180D` |
+| Text | `#FFFFFF` |
+| Muted | `#8A8783` |
+| **CTA only** | Robin Neon `#CCFF00` |
+| Error | `#FF4D4D` |
+| Warning | `#F5A623` |
+| Grid | 8px |
+| Radius primary | 10–14px |
+| Type | system geometric sans only |
+
+### Hard rules
+- One primary Neon button per screen
+- No glass, glow, gradient, purple, blue neon wash, casino chrome
+- Bags: technical line art + white circular logo plate (token logo composited)
+- Social: small PFP + truncated wallet `0x7f3a…b2c1` only
+- One screen = one job; state only changes the table + the one button
+
+---
+
+## Core Jobs
 1. See pawns + relative worth (% + thin-pool warning)
 2. Pawn (freeze weight at pawn time)
 3. Watch lock → pick
@@ -50,14 +50,7 @@
 6. Bail only before lock
 
 ## States (one primary action each)
-- empty
-- filling
-- blocked
-- locked
-- in-progress (pick theater)
-- success
-- partial
-- error
+empty · filling · blocked · locked · in-progress · success · partial · error
 
 ## Defaults
 - Settlement: winner gets the actual meme bags
@@ -68,40 +61,32 @@
 - Fairness: commit hash before lock, seed after settle, one Verify tap
 
 ## Screen Map
-| # | State | File | Notes |
-|---|-------|------|-------|
-| 01 | empty | design/design/screens/01-empty.jpg | dotted table, Put a coin on |
-| 02 | filling | design/screens/02-filling.jpg | bags + PFP + wallets + Pawn |
-| 03 | locked | design/screens/03-locked.jpg | frozen, can't bail |
-| 04 | claim | design/screens/04-claim.jpg | you won the bag |
-| 05 | pawn | design/screens/05-pawn.jpg | select bag, freeze weight |
-| 06 | verify | design/screens/06-verify.jpg | hash / seed / three checks |
-| 07 | in-progress | design/screens/07-in-progress-crab.jpg | crab theater (result already committed) |
-| 08 | partial-error | design/screens/08-partial-error.jpg | 2 of 3 bags, Retry |
-| 09 | table-list | design/screens/09-table-list.jpg | discovery |
-| 10 | success | design/screens/10-success.jpg | claimed |
-| 11 | bail-confirm | design/screens/11-bail-confirm.jpg | leave before lock only |
+| # | State | File |
+|---|-------|------|
+| 01 | empty | design/screens/01-empty.jpg |
+| 02 | filling | design/screens/02-filling.jpg |
+| 03 | locked | design/screens/03-locked.jpg |
+| 04 | claim | design/screens/04-claim.jpg |
+| 05 | pawn | design/screens/05-pawn.jpg |
+| 06 | verify | design/screens/06-verify.jpg |
+| 07 | in-progress | design/screens/07-in-progress-crab.jpg |
+| 08 | partial-error | design/screens/08-partial-error.jpg |
+| 09 | table-list | design/screens/09-table-list.jpg |
+| 10 | success | design/screens/10-success.jpg |
+| 11 | bail-confirm | design/screens/11-bail-confirm.jpg |
 
-## Social Identity (PFP + Wallet)
+## Social Identity
 - Small circular PFPs next to each bag / pawn
-- Truncated wallet only: `0x7f3a…b2c1` (muted gray)
-- Never full address, never leaderboard, never dense wall
-- Serves: see who is at the table, verify, claim, social proof
+- Truncated wallet only: `0x7f3a…b2c1` (muted)
+- Never full address, never leaderboard
 
 ## Killed (do not ship)
-- Giant wheel hero
-- Chat dock
-- Token encyclopedia
-- Hex-dump wall
-- 12-step approve
-- Settings farm
-- 3D roulette / coin rain / leaderboard ticker
-- Spin as separate product (spin = later skin of in-progress)
+Giant wheel · chat dock · token encyclopedia · hex-dump wall · 12-step approve · settings farm · 3D roulette / coin rain / leaderboard ticker · spin as separate product
 
 ## Coder Rules
-1. One primary screen. State changes the table and the one button.
-2. Animation is theater — result already committed.
-3. Tickers on bags are meme coins only. Logos on bags. No fund names.
-4. Mobile = same system, stacked modular cards if needed.
-5. Do not invent tokens, typefaces, or a visual system. Tokens live in this doc.
-6. If it could ship on Dribbble or looks like a casino mock, it failed.
+1. Wire **TOKENS.md** first — no freestyle colors
+2. One primary action per state
+3. Animation is theater — result already committed
+4. Tickers are meme coins only
+5. Mobile = same tokens, stacked layout
+6. If it looks like a casino mock or Dribbble shot, rewrite to tokens
