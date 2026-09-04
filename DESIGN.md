@@ -90,3 +90,9 @@ Giant wheel · chat dock · token encyclopedia · hex-dump wall · 12-step appro
 4. Tickers are meme coins only
 5. Mobile = same tokens, stacked layout
 6. If it looks like a casino mock or Dribbble shot, rewrite to tokens
+
+## Visual consistency lock (screens)
+- One master system: warm black canvas, white wireframe technical bags on circular platform, right stats list, PFP + `0x…` wallets, Robin Neon primary bottom-left
+- All desktop screens share that chrome — only state content changes
+- Bags: faceted wireframe + white circular logo plate
+- No light/cream paper backgrounds, no blue glow, no alternate bag styles
