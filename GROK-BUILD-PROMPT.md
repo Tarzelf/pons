@@ -1,11 +1,14 @@
-# Grok Build / Coding Agent Prompt — PONS
+# Grok Build / Coding Agent Prompt — Table.family
 
 Copy everything below this line into your coding agent to start implementation.
 
 ---
 
+## Brand
+**Table.family** — never use Pons/PONS in UI copy or metadata.
+
 ## Mission
-Build **PONS** — a social, provably-fair meme-coin table on Robinhood Chain.
+Build **Table.family** — a social, provably-fair meme-coin table on Robinhood Chain.
 
 You are given locked design tokens and screen references.  
 **Do not invent a new visual language.** Implement tokens first, then UI.

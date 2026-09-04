@@ -1,4 +1,4 @@
-# PONS Design Tokens
+# Table.family Design Tokens
 
 **Source of truth for coding agents.**  
 Do not invent colors, radii, shadows, or type scales. Use these tokens only.

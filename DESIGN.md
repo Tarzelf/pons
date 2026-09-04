@@ -1,4 +1,4 @@
-# PONS — Design System (Coder Handoff)
+# Table.family — Design System (Coder Handoff)
 
 **Product**: Social provably-fair meme-coin table on Robinhood Chain  
 **Visual lock**: Robinhood 2024 identity + unique technical bag illustration  

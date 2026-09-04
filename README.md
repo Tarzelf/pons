@@ -1,47 +1,37 @@
-# PONS
+# Table.family
 
 **Social provably-fair meme-coin table on Robinhood Chain.**
 
-Design system locked. Tokens first. Ready for coding agents.
+Former internal name: Pons — **do not ship as Pons**. Brand is **Table.family**.
+
+## Start here
+
+1. **`BRAND.md`** — name, logo, master table  
+2. **`TOKENS.md`** — colors, space, type, components (coding agents)  
+3. **`DESIGN.md`** — jobs, states, screen map  
+4. **`GROK-BUILD-PROMPT.md`** — paste into coding agent  
 
 ## Repo layout
 
 ```
-├── README.md
-├── TOKENS.md                 ← START HERE — colors, space, type, CSS, Tailwind, components
-├── DESIGN.md                 ← product jobs, states, screen map, rules
-├── GROK-BUILD-PROMPT.md      ← paste into Grok Build / Cursor
+├── BRAND.md
+├── TOKENS.md
+├── DESIGN.md
+├── GROK-BUILD-PROMPT.md
 └── design/
-    ├── bags/                 ← bag base (white circle = logo mask)
-    ├── screens/              ← 11 desktop screens
+    ├── brand/          ← logo + brand sheet
+    ├── master/         ← master table asset
+    ├── bags/           ← bag component (logo plate)
+    ├── screens/        ← product UI screens
     └── mobile/
 ```
 
-## Quick start for coding agents
+## Brand snapshot
 
-1. Open **`TOKENS.md`** and wire colors/spacing/type (CSS vars or Tailwind/TS)
-2. Paste **`GROK-BUILD-PROMPT.md`** into the agent
-3. Build Button + Bag from tokens
-4. Match **`design/screens/`**
-
-## Token snapshot
-
-| Token | Value |
-|-------|--------|
-| bg | `#110E08` |
-| elevated | `#1C180D` |
-| text | `#FFFFFF` |
-| muted | `#8A8783` |
-| **neon (CTA only)** | `#CCFF00` |
-| error | `#FF4D4D` |
-| warning | `#F5A623` |
-
-Full scale, components, and state→CTA map → **TOKENS.md**
+- **Name**: Table.family (period can be neon `#CCFF00`)
+- **Mark**: circular table + three bag seats
+- **UI**: warm black · white wireframe bags · neon CTA only
 
 ## Product
 
-A pawn is a bag. The table is a pile of bags. The winner takes the actual meme-coin bags. Fairness is commit-reveal.
-
-## Status
-
-Design + tokens complete. Images on `main`. Ready to build.
+A pawn is a bag. The table is a pile of bags. Winner takes the actual meme bags. Fairness is commit-reveal.
